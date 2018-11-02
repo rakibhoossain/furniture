@@ -25,23 +25,63 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'furniture' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$furniture_description = get_bloginfo( 'description', 'display' );
-			if ( $furniture_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $furniture_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
+
+		<div class="header-top-area wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="mailto:support@crazycafe.net"><i class="fa fa-envelope"></i> support@crazycafe.net</a> <span class="seprator">|</span> 
+                    <a href="tel:3244221313"><i class="fa fa-phone"></i> +324-4221-313</a> <span class="seprator">|</span> 
+                    <i class="fa fa-clock-o"></i>  Mon - Fri, 9am - 5pm
+                </div>
+                <div class="col-md-6 text-right">
+                    We are giving professional services from last 20 years
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<?php
+	if (has_header_image()) {
+		echo '<div class="site-branding" style="background-image: url(\''.esc_url( get_header_image() ).'\')">';
+	}else{
+		?>
+<div class="site-branding">
+		<?php
+	}
+?>
+
+
+
+		
+
+
+
+			<div class="navbar-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<?php the_custom_logo(); ?>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-8 header_search">
+							<?php get_search_form(); ?>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+							
+<div class="header_right">
+                        <div class="s_icon social">
+                            <ul class="list-inline">
+                                <li><a href="https://facebook.com/RegalFurnitureBangladesh" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCzHC1qmvTSli0ItjMNreL3A" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>									
+                    </div>
+
+						</div>
+					</div>
+				</div>
+			</div>
 		</div><!-- .site-branding -->
 
 <!-- 		<nav id="site-navigation" class="main-navigation">

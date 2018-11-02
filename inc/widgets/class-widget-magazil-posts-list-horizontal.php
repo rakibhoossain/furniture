@@ -10,9 +10,9 @@ class Widget_Magazil_Posts_List_Horizontal extends WP_Widget {
 		add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue' ) );
 		add_action( 'customize_preview_init', array( $this, 'enqueue' ) );
 
-		parent::__construct( 'magazil_widget_posts_list_horizontal', __( 'Magazil - Horizontal Posts List', 'magazil' ), array(
+		parent::__construct( 'magazil_widget_posts_list_horizontal', __( 'Magazil - Horizontal Posts List', 'furniture' ), array(
 			'classname'                   => 'magazil_builder',
-			'description'                 => __( 'Front page horizontal post layout', 'magazil' ),
+			'description'                 => __( 'Front page horizontal post layout', 'furniture' ),
 			'customize_selective_refresh' => true
 		) );
 	}
@@ -26,7 +26,7 @@ class Widget_Magazil_Posts_List_Horizontal extends WP_Widget {
 
 	public function form( $instance ) {
 		$defaults = array(
-			'title'            => __( 'Recent posts', 'magazil' ),
+			'title'            => __( 'Recent posts', 'furniture' ),
 			'show_post'        => 4,
 			'magazil_category' => 'uncategorized',
 			'order' 		   => 'desc'
@@ -37,19 +37,19 @@ class Widget_Magazil_Posts_List_Horizontal extends WP_Widget {
 
 		?>
         <p>
-            <label><?php _e( 'Title', 'magazil' ); ?> :</label>
+            <label><?php _e( 'Title', 'furniture' ); ?> :</label>
             <input class="widefat" type="text" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>"
                    id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
                    value="<?php echo esc_attr( $instance['title'] ); ?>">
         </p>
 
         <p>
-            <label><?php _e( 'Category', 'magazil' ); ?> :</label>
+            <label><?php _e( 'Category', 'furniture' ); ?> :</label>
             <select class="widefat" name="<?php echo esc_attr( $this->get_field_name( 'magazil_category' ) ); ?>"
                     id="<?php echo esc_attr( $this->get_field_id( 'magazil_category' ) ); ?>">
                 <option value="" <?php if ( empty( $instance['magazil_category'] ) ) {
 					echo 'selected="selected"';
-				} ?>><?php _e( '&ndash; Select a category &ndash;', 'magazil' ) ?></option>
+				} ?>><?php _e( '&ndash; Select a category &ndash;', 'furniture' ) ?></option>
 				<?php
 				$categories = get_categories( 
 										array(
@@ -64,17 +64,17 @@ class Widget_Magazil_Posts_List_Horizontal extends WP_Widget {
             </select>
         </p>
         <p>
-            <label><?php _e( 'Order', 'magazil' ); ?> :</label>
+            <label><?php _e( 'Order', 'furniture' ); ?> :</label>
             <select class="widefat" name="<?php echo esc_attr( $this->get_field_name( 'order' ) ); ?>"
                     id="<?php echo esc_attr( $this->get_field_id( 'order' ) ); ?>" class="pull-right">
-                <option value ="desc" <?php echo ($instance['order'] == 'desc') ? 'selected' : '';?> ><?php echo esc_html__( 'Descending', 'magazil' )?></option>
-                <option value ="asc" <?php echo ($instance['order'] == 'asc') ? 'selected' : '';?> ><?php echo esc_html__( 'Ascending', 'magazil' )?></option>
-                <option value ="rand" <?php echo ($instance['order'] == 'rand') ? 'selected' : '';?> ><?php echo esc_html__( 'Random', 'magazil' )?></option>
+                <option value ="desc" <?php echo ($instance['order'] == 'desc') ? 'selected' : '';?> ><?php echo esc_html__( 'Descending', 'furniture' )?></option>
+                <option value ="asc" <?php echo ($instance['order'] == 'asc') ? 'selected' : '';?> ><?php echo esc_html__( 'Ascending', 'furniture' )?></option>
+                <option value ="rand" <?php echo ($instance['order'] == 'rand') ? 'selected' : '';?> ><?php echo esc_html__( 'Random', 'furniture' )?></option>
             </select>
         </p>
         <label class="block" for="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ); ?>">
             <span class="customize-control-title">
-               <?php _e( 'Posts to Show', 'magazil' ); ?> :
+               <?php _e( 'Posts to Show', 'furniture' ); ?> :
             </span>
         </label>
 		<div class="slider-container">
@@ -132,7 +132,7 @@ class Widget_Magazil_Posts_List_Horizontal extends WP_Widget {
 
 	public function widget( $args, $instance ) {
 		$defaults = array(
-			'title'            => __( 'Recent posts', 'magazil' ),
+			'title'            => __( 'Recent posts', 'furniture' ),
 			'show_post'        => 4,
 			'magazil_category' => '',
 			'order'            => 'desc',
@@ -149,7 +149,7 @@ class Widget_Magazil_Posts_List_Horizontal extends WP_Widget {
 		if ( file_exists( $filepath ) ) {
 			include $filepath;
 		} else {
-			esc_html_e( 'Please configure your widget', 'magazil' );
+			esc_html_e( 'Please configure your widget', 'furniture' );
 		}
 
 

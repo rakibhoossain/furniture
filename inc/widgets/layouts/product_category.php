@@ -22,7 +22,7 @@
   </div>
   <div class="product-describ">
             <h4><?php echo $ridianur_term->name; ?></h4>
-          <span><a href="<?php echo esc_url($cat_url); ?>" class="btn btn-primary product-btn"><i class="fa fa-search"></i> View</a></span>
+          <span><a href="<?php echo esc_url($cat_url); ?>" class="btn btn-primary product-btn"><i class="fa fa-search"></i> <?php echo __('View', 'furniture'); ?></a></span>
   </div>
 </div>
 </li>

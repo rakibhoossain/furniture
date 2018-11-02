@@ -16,6 +16,6 @@
               <?php echo get_the_title(); ?>
             </a>
           </h4>
-          <span><a href="<?php echo get_the_permalink(); ?>" class="btn btn-primary product-btn">Details</a></span>
+          <span><a href="<?php echo get_the_permalink(); ?>" class="btn btn-primary product-btn"><?php echo __('Details', 'furniture'); ?></a></span>
   </div>
 </div>

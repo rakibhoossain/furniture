@@ -19,11 +19,11 @@
 <div class="post-desc">    
     <h3 class="posts-i-ttl"><a href="<?php echo get_permalink( $post->ID ); ?>"><?php the_title(); ?></a></h3>
      <?php the_excerpt(); ?>
-     <a href="<?php echo get_permalink( $post->ID ); ?>" class="posts-i-more"><?php echo __('Read more','eshop'); ?>...</a>
+     <a href="<?php echo get_permalink( $post->ID ); ?>" class="posts-i-more"><?php echo __('Read more','furniture'); ?>...</a>
 </div>
     <?php
         wp_link_pages( array(
-            'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'eshop' ),
+            'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'furniture' ),
             'after'  => '</div>',
         ) );
     ?>

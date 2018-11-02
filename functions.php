@@ -111,9 +111,9 @@ add_action( 'after_setup_theme', 'furniture_content_width', 0 );
  */
 function furniture_widgets_init() {
 		register_sidebar( array(
-		'name'          => esc_html__( 'Front page area', 'magazil' ),
+		'name'          => esc_html__( 'Front page area', 'furniture' ),
 		'id'            => 'content-area',
-		'description'   => esc_html__( 'Add widgets to front page.', 'magazil' ),
+		'description'   => esc_html__( 'Add widgets to front page.', 'furniture' ),
 		'before_widget' => '<div id="%1$s" class="single-post-wrap pd-20 %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="cat-title">',
@@ -137,15 +137,15 @@ function furniture_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Product sidebar', 'furniture' ),
-		'id'            => 'product-sidebar',
-		'description'   => esc_html__( 'Add widgets to product sidebar.', 'furniture' ),
-		'before_widget' => '<section id="%1$s" class="sidebar sidebar-product widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	// register_sidebar( array(
+	// 	'name'          => esc_html__( 'Product sidebar', 'furniture' ),
+	// 	'id'            => 'product-sidebar',
+	// 	'description'   => esc_html__( 'Add widgets to product sidebar.', 'furniture' ),
+	// 	'before_widget' => '<section id="%1$s" class="sidebar sidebar-product widget %2$s">',
+	// 	'after_widget'  => '</section>',
+	// 	'before_title'  => '<h2 class="widget-title">',
+	// 	'after_title'   => '</h2>',
+	// ) );
 
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer sidebar-1', 'furniture' ),

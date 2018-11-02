@@ -13,6 +13,50 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
+}
+
+/* header */
+.header_right ul{
+    display: inline-flex;
+    float: right;
+    margin-top: 30px;   
+}
+.social li {
+    background: #B5B5B5;
+    border: 2px solid #B5B5B5;
+    border-radius: 50%;
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    margin: 0 8px 0 0;
+    padding: 0;
+    width: 36px;
+    transition: all .5s ease 0s;
+    -moz-transition: all .5s ease 0s;
+    -webkit-transition: all .5s ease 0s;
+    -ms-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s
+}
+
+.social li:hover {
+    transform: scale(1.15) rotate(360deg);
+    -webkit-transform: scale(1.1) rotate(360deg);
+    -moz-transform: scale(1.1) rotate(360deg);
+    -ms-transform: scale(1.1) rotate(360deg);
+    -o-transform: scale(1.1) rotate(360deg);
+    border: 2px solid #454545;
+    background: #454545
+}
+
+.social li a {
+    color: #EDEFF1
+}
+
+.social li a i {
+    font-size: 16px;
+    margin: 0 0 0 8px;
+    color: #EDEFF1!important
 }
 /*
 ============================================
@@ -57,6 +101,50 @@ input.search-btn:hover {
         height: 40px
     }
 }
+
+
+.header_search .search-form {
+    height: 34px;
+    margin-top: 30px;
+}
+.header_search .search-field{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.header_search .search-btn {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* Header area CSS */
+
+.header-top-area {
+    background-color: #222;
+    font-size: 15px;
+    padding: 10px 0;
+}
+.header-top-area a,
+.header-top-area {
+    color: #fff;
+}
+.header-top-area i.fa {
+    color: #c0996f;
+}
+
+
+
+
+.widget-area.sidebar .widget{
+    border: 1px solid #edeff8;
+}
+.widget-area.sidebar{}
+.widget-area.sidebar{}
+.widget-area.sidebar{}
+.widget-area.sidebar{}
+.widget-area.sidebar{}
+.widget-area.sidebar{}
+
+
 
 
 .sidebar.widget .search-form{
@@ -1084,17 +1172,16 @@ Blog V2
     font-size: 16px;
     font-weight: 700;
     line-height: 27px;
-    padding: 0 0 5px;
+    padding: 15px;
     margin: 0;
     text-transform: uppercase;
 }
 .sidebar.widget ul{
     margin: 0;
-    padding: 0;
+    padding: 15px;
     list-style: none;
     font-size: 13px;
     margin-left: 0;
-    padding-left: 0;
     margin-top: 5px;
 }
 .sidebar.widget ,
