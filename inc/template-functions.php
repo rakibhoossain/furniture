@@ -165,15 +165,32 @@ function eshop_comment($comment, $args, $depth) {
     endif;
 }
 
-
-// product url
-function wpse_5308_post_type_link( $link, $post ) {
-    if ( $post->post_type === 'product' ) {
-        if ( $terms = get_the_terms( $post->ID, 'product-category' ) )
-            $link = str_replace( 'product-category', current( $terms )->slug, $link );
+add_filter( 'pre_get_posts', 'tgm_io_cpt_search' );
+/**
+ * This function modifies the main WordPress query to include an array of 
+ * post types instead of the default 'post' post type.
+ *
+ * @param object $query  The original query.
+ * @return object $query The amended query.
+ */
+function tgm_io_cpt_search( $query ) {
+    
+    if ( $query->is_search ) {
+    $query->set( 'post_type', array( 'post', 'product' ) );
     }
-
-    return $link;
+    
+    return $query;
+    
 }
 
-add_filter( 'post_type_link', 'wpse_5308_post_type_link', 10, 2 );
+// product url
+// function wpse_5308_post_type_link( $link, $post ) {
+//     if ( $post->post_type === 'product' ) {
+//         if ( $terms = get_the_terms( $post->ID, 'product-category' ) )
+//             $link = str_replace( 'product-category', current( $terms )->slug, $link );
+//     }
+
+//     return $link;
+// }
+
+// add_filter( 'post_type_link', 'wpse_5308_post_type_link', 10, 2 );

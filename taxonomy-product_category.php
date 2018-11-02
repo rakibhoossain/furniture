@@ -8,16 +8,8 @@
  */
 
 get_header();
-?>
-<div class="container">
-	<?php eshop_breadcrumbs(); ?>
-	<div class="row">
-		<div class="col-md-9">
-			
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
 
-		<?php
+
 		// Define the query
 		$term = get_queried_object();
 		$args = array(
@@ -26,15 +18,26 @@ get_header();
 		);
 		$query = new WP_Query( $args );
 
+?>
 
-		if ( $query->have_posts() ) : ?>
-
+<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+<div class="container">
+	<?php eshop_breadcrumbs(); ?>
 			<header class="page-header">
 				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
+				if ( $query->have_posts() ) :
+					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_description( '<div class="archive-description">', '</div>' );
+				endif;
 				?>
-			</header><!-- .page-header -->
+			</header><!-- .page-header -->	
+	<div class="row">
+		<div class="col-md-9">
+		<?php
+		if ( $query->have_posts() ) : ?>
+
+
 
 			<div class="posts-list blog-page">
 			<?php
@@ -79,8 +82,7 @@ get_header();
 		endif;
 		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+
 
 
 		</div>
@@ -89,6 +91,7 @@ get_header();
 		</div>
 	</div>
 </div>
-
+		</main><!-- #main -->
+	</div><!-- #primary -->
 <?php
 get_footer();

@@ -21,14 +21,15 @@ if ( $posts->have_posts() ): ?>
                     </a>
 				<?php } ?>
             </h3>
-            <div class="container">
-            	<div class="row xsResponse">
-				<?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
-            		<?php get_template_part( 'template-parts/loop/post', 'horizontal' ); ?>
-				<?php endwhile; wp_reset_postdata();?>
-				</div>
+            <div class="product-container">
+            	<ul class="un-sty product-slider">
+					<?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
+						<li>
+	            		<?php get_template_part( 'template-parts/content', 'product' ); ?>
+	            		</li>
+					<?php endwhile; wp_reset_postdata();?>
+				</ul>
 			</div>
-			<div class="container">
-				<div class="clearfix" style="margin: 40px 0 0 0;"></div>
-			</div>
+			<div class="clearfix" style="margin: 40px 0 0 0;"></div>
+
 <?php endif; ?>

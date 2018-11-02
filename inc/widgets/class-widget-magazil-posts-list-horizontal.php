@@ -109,9 +109,10 @@ class Widget_Magazil_Posts_List_Horizontal extends WP_Widget {
 	 */
 	public function get_posts( $args ) {
 
-		$idObj = get_category_by_slug( $args['magazil_category'] );
 		$atts  = array(
-			'posts_per_page' => $args['show_post']
+			'posts_per_page' => $args['show_post'],
+			'post_type' => 'product',
+			'product_category' => $args['magazil_category']
 		);
 
 		$atts['order'] = $args['order'];
@@ -120,11 +121,6 @@ class Widget_Magazil_Posts_List_Horizontal extends WP_Widget {
 		if('rand' == $atts['order'] ){
 			$atts['order'] = '';
 			$atts['orderby'] = 'rand';
-		}
-
-		if ( $idObj ) {
-			$id          = $idObj->term_id;
-			$atts['cat'] = $id;
 		}
 
 		$posts = new WP_Query( $atts );

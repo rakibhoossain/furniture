@@ -1,38 +1,21 @@
-    <!-- magnific start -->
-    <section id="magnific">
-    <div class="row">
-      <div class="large-5 column">
-        <div class="xzoom-container">
-<?php
-$product_image_url = wp_get_attachment_url( get_post_thumbnail_id() );
-?>
-          <img class="xzoom5" id="xzoom-magnific" src="<?php echo $product_image_url; ?>" xoriginal="<?php echo $product_image_url; ?>" />
-
-          <div class="xzoom-thumbs">
-
-<?php
-    $gallery_array = explode(',', get_post_meta(get_the_ID(),'shift8_portfolio_gallery',true));
-    if (is_array($gallery_array)) {
-      ?>
-<a href="<?php echo $product_image_url; ?>"><img class="xzoom-gallery5" width="80" src="<?php echo $product_image_url; ?>" title="image title"></a>
-
-      <?php
-      foreach ($gallery_array as $gallery_item) {
-        $gallary_product = wp_get_attachment_thumb_url($gallery_item);
-?>
-
-            <a href="<?php echo $gallary_product; ?>"><img class="xzoom-gallery5" width="80" src="<?php echo $gallary_product; ?>" title="image title"></a>
-
-<?php       
+<div class="product">
+  <div class="product-image">
+            <a href="<?php the_permalink(); ?>">
+          <?php if(has_post_thumbnail()){ 
+        // $image_url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'magazil-feature-image' );
+        // $image = esc_url($image_url[0]);
+            $image = wp_get_attachment_url( get_post_thumbnail_id() );
+            printf('<img src="'.esc_url($image).'" alt="img" class="img-responsive primaryImage">');
       }
-    }
-
-?>
-
-          </div>
-        </div>        
-      </div>
-      <div class="large-7 column">gg</div>
-    </div>
-    </section>   
-    <!-- magnific end -->
+            ?>
+          </a>
+  </div>
+  <div class="product-describ">
+              <h4>
+            <a href="<?php echo get_the_permalink(); ?>">
+              <?php echo get_the_title(); ?>
+            </a>
+          </h4>
+          <span><a href="<?php echo get_the_permalink(); ?>" class="btn btn-primary product-btn">Details</a></span>
+  </div>
+</div>

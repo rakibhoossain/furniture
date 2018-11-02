@@ -15,7 +15,7 @@ get_header();
 				<div class="row">
 					<div class="col-md-12">
 									
-									<header class="page-header">
+			<header class="page-header">
 				<h1 class="page-title">
 					<?php
 					/* translators: %s: search query. */

@@ -14,7 +14,9 @@ get_header();
                     if ( $query->have_posts() ) :
                         while ( $query->have_posts() ) : $query->the_post();
                             if ( has_post_thumbnail() ) {   
-                                $image = wp_get_attachment_url( get_post_thumbnail_id() );
+                                // $image = wp_get_attachment_url( get_post_thumbnail_id() );
+                                $image_url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'furniture-large' );
+                                $image = esc_url($image_url[0]);
                             ?>
                                 <div class="single-slide-item" style="background: url('<?php echo esc_url($image); ?>');">
                                     <div class="slide-item-table">
@@ -76,7 +78,10 @@ get_header();
                     $post_position = $post_custom["position"][0];
                     $post_rating = $post_custom["rating"][0];
                if ( has_post_thumbnail() ) {
-                $testimonial_image_url = wp_get_attachment_url( get_post_thumbnail_id() );
+                // $testimonial_image_url = wp_get_attachment_url( get_post_thumbnail_id() );
+
+                $image_url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'furniture-xsm' );
+                $testimonial_image_url = esc_url($image_url[0]);
 
 ?>
 <li>
@@ -120,9 +125,7 @@ get_header();
 
                                 </ul>
                             </div>
-<!-- 
-                            <a id="testimonials-prev" class="prev" href="#" hidefocus="true" style="outline: none; display: inline;">prev</a>
-                            <a id="testimonials-next" class="next" href="#" hidefocus="true" style="outline: none; display: inline;">next</a> -->
+
                         </div>
 
 
@@ -132,7 +135,7 @@ get_header();
                 </div>
                 <!--/ row-->
             </div>
-<!--             <div id="testimonials-controls" class="testimonials-controls" style="display: block; margin-top: -36.5px;"><a href="#" class="selected"><span>1</span></a><a href="#" class=""><span>2</span></a><a href="#" class=""><span>3</span></a><a href="#" class=""><span>4</span></a><a href="#" class=""><span>5</span></a></div> -->
+
         </div>
     </section>
 
@@ -153,14 +156,20 @@ get_header();
                     $post_custom = get_post_custom($post_id);
                     $partner_name = get_the_title();
                     $partner_url = $post_custom["website"][0];
-                if ( has_post_thumbnail() ){$partner_image_url = wp_get_attachment_url( get_post_thumbnail_id() );
+                if ( has_post_thumbnail() ){
+
+                    // $partner_image_url = wp_get_attachment_url( get_post_thumbnail_id() );
+                $image_url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'furniture-xsm' );
+                $partner_image_url = esc_url($image_url[0]);
 
                     ?>
 
 <li>
-    <a href="<?php echo $partner_url; ?>" target="_blank">
-       <img src="<?php echo $partner_image_url; ?>" class="wow fadeInUp" alt="<?php echo $partner_name; ?>">
-   </a>    
+    <div class="partner">
+        <a href="<?php echo $partner_url; ?>" target="_blank">
+           <img src="<?php echo $partner_image_url; ?>" class="img-responsive" alt="<?php echo $partner_name; ?>">
+       </a>
+    </div>    
 </li>
 
 

@@ -14,15 +14,15 @@
 
 get_header();
 ?>
-
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
 <div class="container">
 	<?php eshop_breadcrumbs(); ?>
 	<div class="row">
 		<div class="col-md-9">
 			
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+
 
 		<?php
 		if ( have_posts() ) :
@@ -72,8 +72,7 @@ get_header();
 		endif;
 		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+
 
 
 		</div>
@@ -82,6 +81,7 @@ get_header();
 		</div>
 	</div>
 </div>
-
+		</main><!-- #main -->
+	</div><!-- #primary -->
 <?php
 get_footer();

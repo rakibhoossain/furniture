@@ -47,6 +47,12 @@ if ( ! function_exists( 'furniture_setup' ) ) :
 			'primary' => esc_html__( 'Primary', 'furniture' ),
 		) );
 
+
+		add_image_size( 'furniture-large', 1183, 521, true );
+		add_image_size( 'furniture-product', 1000, 1000, true );
+		add_image_size( 'furniture-feature', 500, 500, true );
+		add_image_size( 'furniture-xsm', 150, 150, true );
+
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
@@ -124,9 +130,18 @@ function furniture_widgets_init() {
 	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'furniture' ),
-		'id'            => 'sidebar-1',
+		'id'            => 'primary-sidebar',
 		'description'   => esc_html__( 'Add widgets here.', 'furniture' ),
-		'before_widget' => '<section id="%1$s" class="sidebar widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="sidebar wdg-p widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Product sidebar', 'furniture' ),
+		'id'            => 'product-sidebar',
+		'description'   => esc_html__( 'Add widgets to product sidebar.', 'furniture' ),
+		'before_widget' => '<section id="%1$s" class="sidebar sidebar-product widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
@@ -237,7 +252,10 @@ require get_template_directory() . '/inc/template-functions.php';
  * Functions which enhance for related post.
  */
 require get_template_directory() .'/inc/class-eshop-related-posts.php';
-
+/**
+ * Functions which enhance for related product.
+ */
+require get_template_directory() .'/inc/class-eshop-related-product.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.

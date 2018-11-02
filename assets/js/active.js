@@ -16,12 +16,13 @@
             items: 3,
             nav: false,
             dots: false,
-            autoplay: true,
+            // autoplay: true,
             loop: true,
             mouseDrag: true,
             touchDrag: true,
+            margin: 10
         });
-        $(".xsResponse").owlCarousel({
+        $(".product-slider").owlCarousel({
             items: 4,
             nav: false,
             dots: false,
@@ -30,21 +31,21 @@
             mouseDrag: true,
             touchDrag: true,
             margin:20,
-            center: true,
+            // center: true,
             responsive: { 0: {items: 1}, 600: {items: 3}, 1000: {items: 4} }
         });
-        $(".category_products").owlCarousel({
-            items: 4,
-            nav: false,
-            dots: false,
-            autoplay: false,
-            loop: true,
-            mouseDrag: true,
-            touchDrag: true,
-            margin:10,
-            center: true,
-            responsive: { 0: {items: 1}, 600: {items: 3}, 1000: {items: 4} }
-        });
+        // $(".category_products").owlCarousel({
+        //     items: 4,
+        //     nav: false,
+        //     dots: false,
+        //     autoplay: false,
+        //     loop: true,
+        //     mouseDrag: true,
+        //     touchDrag: true,
+        //     margin:10,
+        //     center: true,
+        //     responsive: { 0: {items: 1}, 600: {items: 3}, 1000: {items: 4} }
+        // });
         $(".testimonial-slide").owlCarousel({
             items: 1,
             nav: false,
