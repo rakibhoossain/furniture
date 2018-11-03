@@ -21,7 +21,6 @@ get_header();
         </div>
     </div>
 </div>
-
 <!-- Content widgetarea -->
 <div class="container contnt-area">
     <div class="row">
@@ -33,7 +32,7 @@ get_header();
     </div>
 </div>
 
-    <!-- Testimonials -->
+<!-- Testimonials -->
 <section class="testimonials ">
         <div class="testimonials-inner">
             <div class="container">

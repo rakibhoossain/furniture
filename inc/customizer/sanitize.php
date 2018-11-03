@@ -112,6 +112,19 @@ function magazil_sanitize_array_page( $input ) {
   return $input;
 }
 
+function magazil_sanitize_array_product( $input ) {
+  $valid = furniture_product_list();
+  if (is_array($input) && !empty($input)) {
+    foreach ( $input as $value ) {
+      if ( ! array_key_exists( $value, $valid ) ) {
+        return [];
+      }
+    }
+  }
+  return $input;
+}
+
+
 /**
  * Validate the options against the existing categories
  *

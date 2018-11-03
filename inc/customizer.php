@@ -106,13 +106,22 @@ function furniture_customize_register( $wp_customize ) {
         ));
         
         /**
-         * Display Breaking tags
+         * Display Breaking page
          */
         $wp_customize->add_setting( 'magazil_breaking_news_page', array(
             'sanitize_callback' =>  'magazil_sanitize_array_page',
             // 'default'           => '',
             'transport'  => 'postMessage'
         ));
+
+        /**
+         * Display Breaking product
+         */
+        $wp_customize->add_setting( 'magazil_breaking_product_page', array(
+            'sanitize_callback' =>  'magazil_sanitize_array_product',
+            // 'default'           => '',
+            'transport'  => 'postMessage'
+        ));        
 
         /**
          * Display Breaking category
@@ -164,6 +173,18 @@ function furniture_customize_register( $wp_customize ) {
             'type'     => 'multiple',
             'choices'  => magazil_page_list(),
             'active_callback' => 'breaking_page_callback',
+        ) ) );
+
+        /**
+         * Breaking news product
+         */
+        $wp_customize->add_control( new Customizer_Select_Dropdown_Control( $wp_customize, 'magazil_breaking_product_page', array(
+            'label'   => __('Select product', 'furniture'),
+            'section' => 'magazil_breaking_news_controls',
+            'settings'   => 'magazil_breaking_product_page',
+            'type'     => 'multiple',
+            'choices'  => furniture_product_list(),
+            'active_callback' => 'breaking_product_callback',
         ) ) );
 
         /**

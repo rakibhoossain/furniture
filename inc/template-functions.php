@@ -214,6 +214,20 @@ function magazil_page_list() {
   return $pages;
 }
 
+function furniture_product_list(){
+  $pages    = array();
+  $products = get_posts(
+      array(
+          'showposts' => -1,
+          'post_type' => 'product',
+      )
+  );
+  
+  foreach ( $products as $page ) {
+    $pages[ $page->ID ] = $page->post_title;
+  }
+  return $pages;
+}
 
 
 /**
@@ -229,22 +243,6 @@ function magazil_cat_list() {
 
   return $cats;
 }
-
-
-/**
- * Get all tags
- * 
- * @return array
- */
-function magazil_tag_list() {
-  $tags    = array();
-  foreach ( get_tags() as $tag ) {
-    $tags[ $tag->term_id ] = $tag->name;
-  }
-
-  return $tags;
-}
-
 
 
 
