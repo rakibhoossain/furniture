@@ -20,7 +20,8 @@
 .header_right ul{
     display: inline-flex;
     float: right;
-    margin-top: 30px;   
+    margin-top: 30px;  
+    list-style: none; 
 }
 .social li {
     background: #B5B5B5;

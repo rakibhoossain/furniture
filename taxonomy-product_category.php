@@ -31,7 +31,7 @@ get_header();
 					the_archive_description( '<div class="archive-description">', '</div>' );
 				endif;
 				?>
-			</header><!-- .page-header -->	
+			</header><!-- .page-header -->
 	<div class="row">
 		<div class="col-md-9">
 		<?php
@@ -59,8 +59,8 @@ get_header();
 
 			endwhile;
 
-			/* Restore original Post Data 
-			 * NB: Because we are using new WP_Query we aren't stomping on the 
+			/* Restore original Post Data
+			 * NB: Because we are using new WP_Query we aren't stomping on the
 			 * original $wp_query and it does not need to be reset.
 			*/
 			wp_reset_postdata();
@@ -87,7 +87,9 @@ get_header();
 
 		</div>
 		<div class="col-md-3">
-			<?php get_sidebar();?>
+			<?php if ( is_active_sidebar( 'product-sidebar' ) ) { ?>
+					<?php dynamic_sidebar( 'product-sidebar' ); ?>
+			<?php } ?>
 		</div>
 	</div>
 </div>

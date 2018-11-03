@@ -63,6 +63,10 @@ get_header();
 		<div class="col-md-12">
 			<div class="product-single-details">
 				<?php the_content(); ?>
+				<!-- Share Links -->
+		        <div class="post-share-wrap">
+		            <?php furniture_social_share(); ?>
+		        </div>
 			</div>
 		</div>
 		<div class="col-md-12">

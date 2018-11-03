@@ -183,6 +183,218 @@ function tgm_io_cpt_search( $query ) {
     
 }
 
+/**
+ * Get Breaking news types
+ * 
+ * @return array
+ */
+function magazil_breaking_news_type() {
+  $news = array();
+
+  $news[ 'post' ]       = esc_html__( 'Posts', 'furniture' );
+  $news[ 'page' ]       = esc_html__( 'Pages', 'furniture' );
+  $news[ 'product' ]       = esc_html__( 'Product', 'furniture' );
+  $news[ 'category' ]   = esc_html__( 'Categories', 'furniture' );
+  $news[ 'custom' ]        = esc_html__( 'Custom', 'furniture' );
+
+  return $news;
+}
+
+/**
+ * Get all pagess
+ * 
+ * @return array
+ */
+function magazil_page_list() {
+  $pages    = array();
+  foreach ( get_pages() as $page ) {
+    $pages[ $page->ID ] = $page->post_title;
+  }
+
+  return $pages;
+}
+
+
+
+/**
+ * Get all categories
+ * 
+ * @return array
+ */
+function magazil_cat_list() {
+  $cats    = array();
+  foreach ( get_categories() as $categories => $category ) {
+    $cats[ $category->term_id ] = $category->name;
+  }
+
+  return $cats;
+}
+
+
+/**
+ * Get all tags
+ * 
+ * @return array
+ */
+function magazil_tag_list() {
+  $tags    = array();
+  foreach ( get_tags() as $tag ) {
+    $tags[ $tag->term_id ] = $tag->name;
+  }
+
+  return $tags;
+}
+
+
+
+
+
+
+/**
+ * Display Fontawesome icons in social links menu.
+ *
+ * @param  string  $item_output The menu item output.
+ * @param  WP_Post $item        Menu item object.
+ * @param  int     $depth       Depth of the menu.
+ * @param  array   $args        wp_nav_menu() arguments.
+ * @return string  $item_output The menu item output with social icon.
+ */
+function magazil_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
+  // Get supported social icons.
+  $social_icons =  magazil_social_links_icons();
+
+  // Change SVG icon inside social links menu if there is supported URL.
+  if ( 'social' === $args->theme_location ) {
+    foreach ( $social_icons as $attr => $value ) {
+      if ( false !== strpos( $item_output, $attr ) ) {
+
+        $item_output = str_replace( $args->link_after, '</span><i class="fa fa-'.esc_attr( $value ).'"></i>', $item_output );
+      }
+    }
+  }
+
+  return $item_output;
+}
+add_filter( 'walker_nav_menu_start_el', 'magazil_nav_menu_social_icons', 10, 4 );
+
+
+/**
+ * Returns an array of supported social links (URL and icon name).
+ *
+ * @return array $social_links_icons
+ */
+function magazil_social_links_icons() {
+  // Supported social links icons.
+  $social_links_icons = array(
+    'behance.net'     => 'behance',
+    'codepen.io'      => 'codepen',
+    'deviantart.com'  => 'deviantart',
+    'digg.com'        => 'digg',
+    'docker.com'      => 'dockerhub',
+    'dribbble.com'    => 'dribbble',
+    'dropbox.com'     => 'dropbox',
+    'facebook.com'    => 'facebook',
+    'flickr.com'      => 'flickr',
+    'foursquare.com'  => 'foursquare',
+    'plus.google.com' => 'google-plus',
+    'github.com'      => 'github',
+    'instagram.com'   => 'instagram',
+    'linkedin.com'    => 'linkedin',
+    'mailto:'         => 'envelope-o',
+    'medium.com'      => 'medium',
+    'pinterest.com'   => 'pinterest-p',
+    'pscp.tv'         => 'periscope',
+    'getpocket.com'   => 'get-pocket',
+    'reddit.com'      => 'reddit-alien',
+    'skype.com'       => 'skype',
+    'skype:'          => 'skype',
+    'slideshare.net'  => 'slideshare',
+    'snapchat.com'    => 'snapchat-ghost',
+    'soundcloud.com'  => 'soundcloud',
+    'spotify.com'     => 'spotify',
+    'stumbleupon.com' => 'stumbleupon',
+    'tumblr.com'      => 'tumblr',
+    'twitch.tv'       => 'twitch',
+    'twitter.com'     => 'twitter',
+    'vimeo.com'       => 'vimeo',
+    'vine.co'         => 'vine',
+    'vk.com'          => 'vk',
+    'wordpress.org'   => 'wordpress',
+    'wordpress.com'   => 'wordpress',
+    'yelp.com'        => 'yelp',
+    'youtube.com'     => 'youtube',
+  );
+
+  /**
+   * Filter Magazil social links icons.
+   *
+   * @since Magazil 1.0
+   *
+   * @param array $social_links_icons Array of social links icons.
+   */
+  return apply_filters( 'magazil_social_links_icons', $social_links_icons );
+}
+
+
+
+
+function furniture_social_share(){
+
+  $url    = get_the_permalink();
+  $title  = get_the_title();
+  ?>
+  <ul class="post-share">
+    <li>
+      <a onclick="window.open('https://www.facebook.com/sharer.php?s=100&amp;p[url]=<?php echo $url; ?>','sharer', 'toolbar=0,status=0,width=620,height=280');" data-toggle="tooltip" title="<?php echo __('Share on Facebook', 'furniture'); ?>" href="javascript:">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a onclick="popUp=window.open('http://twitter.com/home?status=<?php echo $title; ?><?php echo $url; ?>','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" data-toggle="tooltip" title="<?php echo __('Share on Twitter', 'furniture'); ?>" href="javascript:;">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a onclick="popUp=window.open('http://vk.com/share.php?url=<?php echo $url; ?>','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" data-toggle="tooltip" title="<?php echo __('Share on VK', 'furniture'); ?>" href="javascript:;">
+        <i class="fa fa-vk"></i>
+      </a>
+    </li>
+<?php
+  if ( has_post_thumbnail() ){
+    
+    $imsh_url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'furniture-large' );
+    $share_image_url = esc_url($imsh_url[0]);
+?>
+  <li>
+    <a data-toggle="tooltip" title="Share on Pinterest" onclick="popUp=window.open('http://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&amp;description=<?php echo $title; ?>&amp;media=<?php echo $share_image_url; ?>','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" href="javascript:;">
+      <i class="fa fa-pinterest"></i>
+    </a>
+  </li>
+
+<?php
+  }
+?>
+  <li>
+    <a data-toggle="tooltip" title="<?php echo __('Share on Google +1', 'furniture'); ?>" href="javascript:;" onclick="popUp=window.open('https://plus.google.com/share?url=<?php echo $url; ?>','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;">
+      <i class="fa fa-google-plus"></i>
+    </a>
+  </li>
+  <li>
+    <a data-toggle="tooltip" title="Share on Linkedin" onclick="popUp=window.open('http://linkedin.com/shareArticle?mini=true&amp;url=<?php echo $url; ?>&amp;title=<?php echo $title; ?>','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" href="javascript:;">
+      <i class="fa fa-linkedin"></i>
+    </a>
+  </li>
+  <li>
+    <a data-toggle="tooltip" title="Share on Tumblr" onclick="popUp=window.open('http://www.tumblr.com/share/link?url=<?php echo $url; ?>&amp;name=<?php echo $title; ?>&amp;description=<?php echo wp_trim_words( get_the_content(), 40, '...' ); ?>','sharer','scrollbars=yes,width=800,height=400');popUp.focus();return false;" href="javascript:;">
+      <i class="fa fa-tumblr"></i>
+    </a>
+  </li>
+</ul>
+  <?php
+}
+
+
+
 // product url
 // function wpse_5308_post_type_link( $link, $post ) {
 //     if ( $post->post_type === 'product' ) {

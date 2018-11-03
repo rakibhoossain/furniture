@@ -25,39 +25,29 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'furniture' ); ?></a>
 
 	<header id="masthead" class="site-header">
+		<div class="header-top-area">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-md-6">
+	                	<div class="top_header_text">
+						<?php 
+						$magazil_header_text = get_theme_mod( 'magazil_header_text' );
+						if($magazil_header_text):?>
+							<?php echo wp_specialchars_decode($magazil_header_text); ?>
+						<?php endif; ?>
+						</div>
+	                </div>
+	                <div class="col-md-6 text-right fruniture-lng-area">
+						<?php if ( function_exists( 'pll_the_languages' ) ) : ?>
+	                    <ul class="list-lng">
+	                    	<?php pll_the_languages(array( 'show_flags' => 1,'show_names' => 0 ));?></ul>
+						<?php endif; ?>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
 
-		<div class="header-top-area wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <a href="mailto:support@crazycafe.net"><i class="fa fa-envelope"></i> support@crazycafe.net</a> <span class="seprator">|</span> 
-                    <a href="tel:3244221313"><i class="fa fa-phone"></i> +324-4221-313</a> <span class="seprator">|</span> 
-                    <i class="fa fa-clock-o"></i>  Mon - Fri, 9am - 5pm
-                </div>
-                <div class="col-md-6 text-right">
-                    We are giving professional services from last 20 years
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-<?php
-	if (has_header_image()) {
-		echo '<div class="site-branding" style="background-image: url(\''.esc_url( get_header_image() ).'\')">';
-	}else{
-		?>
-<div class="site-branding">
-		<?php
-	}
-?>
-
-
-
-		
-
-
-
+		<div class="site-branding">
 			<div class="navbar-top">
 				<div class="container">
 					<div class="row">
@@ -68,16 +58,22 @@
 							<?php get_search_form(); ?>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							
-<div class="header_right">
-                        <div class="s_icon social">
-                            <ul class="list-inline">
-                                <li><a href="https://facebook.com/RegalFurnitureBangladesh" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="https://www.youtube.com/channel/UCzHC1qmvTSli0ItjMNreL3A" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                            </ul>
-                        </div>									
-                    </div>
-
+							<div class="header_right">
+		                        <div class="s_icon social">
+									<?php
+									if ( has_nav_menu( 'social' ) ) {
+										wp_nav_menu( array(
+											'theme_location'    => 'social',
+											'menu_class'        => 'social-menu',
+											'container'         => false,
+											'depth'          => 1,
+											'link_before'    => '<span class="screen-reader-text">',
+											'link_after'     => '</span><i class="fa fa-chain"></i>',
+										) );
+									}
+									?>
+		                        </div>
+		                    </div>
 						</div>
 					</div>
 				</div>
@@ -98,7 +94,7 @@
 		<div class="primary-navigation">
 			<div class="container main-menu" id="main-menu">
 				<!-- <div class="row align-items-center justify-content-between"></div> -->
-					
+
 					<nav id="nav-menu-container" class="nav-menu-container">
 						<?php
 						wp_nav_menu( array(
@@ -108,13 +104,13 @@
 						) );
 						?>
 					</nav><!-- #nav-menu-container -->
-<!-- 
+<!--
 					<div class="navbar-right">
 
 						ln
 
 					</div> -->
-				
+
 			</div>
 		</div>
 	</header><!-- #masthead -->
@@ -124,7 +120,7 @@
 
 // var_dump($categories);
 
-// foreach ( $categories as $category ) { 
+// foreach ( $categories as $category ) {
 // echo $category->slug;
 // }
 ?>

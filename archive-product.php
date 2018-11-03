@@ -72,12 +72,11 @@ get_header();
 		endif;
 		?>
 
-
-
-
 		</div>
 		<div class="col-md-3">
-			<?php get_sidebar();?>
+			<?php if ( is_active_sidebar( 'product-sidebar' ) ) { ?>
+					<?php dynamic_sidebar( 'product-sidebar' ); ?>
+			<?php } ?>
 		</div>
 	</div>
 </div>

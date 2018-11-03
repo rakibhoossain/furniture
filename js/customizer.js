@@ -39,4 +39,12 @@
 			}
 		} );
 	} );
+
+	wp.customize( 'magazil_header_text', function( value ) {
+		value.bind( function( to ) {
+			$( '.top_header_text' ).html( to );
+		} );
+	} );
+
+
 } )( jQuery );
