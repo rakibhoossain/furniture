@@ -41,6 +41,12 @@ function furniture_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
+
+    $wp_customize->selective_refresh->add_partial( 'magazil_testimonial_text', array(
+        'selector' => '.testimonial_section .section-title_h'
+    ));
+
+
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', array(
 			'selector'        => '.site-title a',
@@ -82,7 +88,7 @@ function furniture_customize_register( $wp_customize ) {
                 'description'     => esc_html__( 'Custom text to display at header top area.', 'furniture' ),
                 'section'         => 'magazil_header_controls',
                 'settings'        => 'magazil_header_text',
-                'type'            => 'editor-news'
+                'type'            => 'editor'
             )
         ));
 
@@ -230,6 +236,34 @@ function furniture_customize_register( $wp_customize ) {
             ),
             'active_callback' => 'breaking_limit_callback',
         ) ) );
+
+
+
+        //  ===================================
+        //  ====     Testimonial      ====
+        //  ===================================
+        $wp_customize->add_section('magazil_testimonial_controls', array(
+            'title' => __('Testimonial settings', 'furniture'),
+            'panel' => 'magazil_panel',
+            'priority' => 8,
+        ));
+
+        $wp_customize->add_setting( 'magazil_testimonial_text', array(
+            'sanitize_callback' => 'wp_kses_post',
+            // 'default'        => 0,
+            'transport'  => 'postMessage'
+        ) );
+        $wp_customize->add_control( new Customizer_Text_Editor_Control(
+            $wp_customize,
+            'magazil_testimonial_text',
+            array(
+                'label'           => esc_html__( 'Header title content', 'furniture' ),
+                'description'     => '',
+                'section'         => 'magazil_testimonial_controls',
+                'settings'        => 'magazil_testimonial_text',
+                'type'            => 'editor'
+            )
+        ));
 
 
 	endif;

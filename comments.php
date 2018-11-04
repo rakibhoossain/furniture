@@ -43,7 +43,7 @@ if ( post_password_required() ) {
 
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) : ?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'eshop' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'furniture' ); ?></p>
 		<?php
 		endif;
 
@@ -64,7 +64,7 @@ $comment_args = array( 'title_reply'=>'Add your comment',
 
     'comment_field' => '<textarea id="comment" placeholder="Your comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>',
 
-    'label_submit' => __('Submit','eshop'),
+    'label_submit' => __('Submit','furniture'),
 
     'comment_notes_before' => '',
     'comment_notes_after' => '',

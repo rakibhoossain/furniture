@@ -22,7 +22,7 @@
                 printf(
 
                                 // Translators: 1 is the post author, 2 is the category list.
-                    __( '<li><time datetime="%1$s">%1$s</time></li><li>%2$s</li><li>Comments: %3$s</li>', 'eshop' ),
+                    __( '<li><time datetime="%1$s">%1$s</time></li><li>%2$s</li><li>Comments: %3$s</li>', 'furniture' ),
                                 // Translators: Post time
                     get_the_date( get_option( 'date_format' ), $post->ID ),
                                 // Translators: tag list

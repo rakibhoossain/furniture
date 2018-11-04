@@ -45,6 +45,11 @@
 			$( '.top_header_text' ).html( to );
 		} );
 	} );
+	wp.customize( 'magazil_testimonial_text', function( value ) {
+		value.bind( function( to ) {
+			$( '.testimonial_section .section-title_h' ).html( to );
+		} );
+	} );
 
 
 } )( jQuery );

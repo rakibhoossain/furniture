@@ -83,15 +83,15 @@ if ( ! function_exists( 'eshop_get_number_of_comments' ) ) {
 
         if ( comments_open() ) {
             if ( 0 == $num_comments ) {
-                $comments = __( 'No Comments', 'eshop' );
+                $comments = __( 'No Comments', 'furniture' );
             } elseif ( $num_comments > 1 ) {
-                $comments = $num_comments . __( ' Comments', 'eshop' );
+                $comments = $num_comments . __( ' Comments', 'furniture' );
             } else {
-                $comments = __( '1 Comment', 'pixova-lite' );
+                $comments = __( '1 Comment', 'furniture' );
             }
             $write_comments = '<a href="' . get_comments_link() . '">' . $comments . '</a>';
         } else {
-            $write_comments = __( 'Comments are off for this post.', 'eshop' );
+            $write_comments = __( 'Comments are off for this post.', 'furniture' );
         }
 
         return $write_comments;
@@ -128,23 +128,23 @@ function eshop_comment($comment, $args, $depth) {
             //     echo $text;     
             // }
         ?>
-        <time datetime="<?php printf(  __('%1$s'), get_comment_date() ); ?>" class="reviews-i-date">
+        <time datetime="<?php printf(  __('%1$s', 'furniture'), get_comment_date() ); ?>" class="reviews-i-date">
             <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
-                <?php printf(  __('%1$s'), get_comment_date() ); ?>
+                <?php printf(  __('%1$s', 'furniture'), get_comment_date() ); ?>
             </a><?php 
-            edit_comment_link( __( '(Edit)' ), '  ', '' ); ?>
+            edit_comment_link( __( '(Edit)','furniture' ), '  ', '' ); ?>
         </time>
 
         </div><?php 
         if ( $comment->comment_approved == '0' ) { ?>
-            <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em><br/><?php 
+            <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'furniture' ); ?></em><br/><?php 
         } ?>
 
 
         <div class="reviews-i-cont">
             <?php comment_text(); ?>
             <span class="reviews-i-margin"></span>
-       <h3 class="reviews-i-ttl"><?php printf( __( '%s' ), get_comment_author_link() ); ?></h3>
+       <h3 class="reviews-i-ttl"><?php printf( __( '%s','furniture' ), get_comment_author_link() ); ?></h3>
 
         </div>
 

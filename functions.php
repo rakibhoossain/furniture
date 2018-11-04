@@ -74,7 +74,11 @@ if ( ! function_exists( 'furniture_setup' ) ) :
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
-
+		/*
+		 * This theme styles the visual editor to resemble the theme style,
+		 * specifically font, colors, and column width.
+	 	 */
+		add_editor_style( array( 'assets/css/editor-style.css') );
 		/**
 		 * Add support for core custom logo.
 		 *

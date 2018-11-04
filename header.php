@@ -47,14 +47,23 @@
 	        </div>
 	    </div>
 
+
+		<?php
+			if (has_header_image()) {
+				echo '<div class="site-branding" style="background-image: url(\''.esc_url( get_header_image() ).'\')">';
+			}else{
+				?>
 		<div class="site-branding">
+				<?php
+			}
+		?>
 			<div class="navbar-top">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 header_logo">
 							<?php the_custom_logo(); ?>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-8 header_search">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 header_search">
 							<?php get_search_form(); ?>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">

@@ -36,18 +36,21 @@
     </div>
     <!--/.footer-->
 
-    <div class="footer-bottom">
+    <div class="footer-bottom text-center">
         <div class="container">
-            <p class="pull-left">
-                © 2018 Codedecor. All right reserved. | <span>Developed by <a style="color: #696969;" href="http://rakib.ooo" target="_blank">Rakib Hossain</a></span>
+            <p class="footer-left">
+            <?php
+                /* translators: 1: Theme name, 2: Theme author. */
+                $theme_author = 'Rakib Hossain' ;
+                $theme_author_url = 'https://rakib.ooo';
+
+                $company = 'Codedecor';
+
+                printf( esc_html__( '&copy; %1$s %2$s. All right reserved. | Developed by  %3$s', 'furniture' ), date('Y'), $company, '<a href="'. esc_url($theme_author_url).'">'.esc_html($theme_author).'</a>' );
+            ?>
             </p>
 
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				// printf( esc_html__( 'Theme: %1$s by %2$s.', 'furniture' ), 'furniture', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-
-            <div class="pull-right paymentMethodImg">
+            <div class="footer-right paymentMethodImg">
                 <img height="30" class="pull-right" src="https://www.regalfurniturebd.com/frontassets/images/site/payment/american-express.png" alt="american" style="opacity: 1;">
                 <img height="30" class="pull-right" src="https://www.regalfurniturebd.com/frontassets/images/site/payment/Bikash.png" alt="Bikash" style="opacity: 1;">
                 <img height="30" class="pull-right" src="https://www.regalfurniturebd.com/frontassets/images/site/payment/dbbl-nexus.png" alt="img" style="opacity: 1;">
