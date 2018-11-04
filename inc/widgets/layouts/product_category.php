@@ -1,7 +1,8 @@
 <div class="category-products">
-<ul class="un-sty product-slider">
+
+<ul class="un-sty <?php if (count($ridianur_terms)>=2) echo' product-slider'; ?>">
 	<?php
-    foreach ( $ridianur_terms as $ridianur_term ) { 
+    foreach ( $ridianur_terms as $ridianur_term ) {
 
 		$image_id = get_term_meta ( $ridianur_term->term_id, 'product_image', true );
 		// Echo the image
@@ -15,7 +16,7 @@
 <div class="product">
   <div class="product-image">
             <a href="<?php echo esc_url($cat_url); ?>">
-          <?php 
+          <?php
             printf('<img src="'.esc_url($image).'" alt="'.$ridianur_term->name.'" class="img-responsive primaryImage">');
             ?>
           </a>
@@ -32,4 +33,3 @@
     ?>
 </ul>
 </div>
-

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $query 				= get_theme_mod( 'magazil_breaking_news_type', 'post' );
 $page 				= get_theme_mod( 'magazil_breaking_news_page', 0 );
@@ -17,7 +17,7 @@ if( $query != 'custom' ):
 		}else{
 			$args = array('post_type' => 'product', 'posts_per_page'=> $number, 'no_found_rows' => 1);
 		}
-		
+
 	}else if($query == 'category'){
 		$args = array('category__in' => $cat, 'posts_per_page'=> $number, 'no_found_rows' => 1 );
 	}else{
@@ -25,13 +25,13 @@ if( $query != 'custom' ):
 	}
 	$breaking_query = new wp_query( $args  );
 
-	if( $breaking_query->have_posts() ) : ?>
+	if( $breaking_query->have_posts()) : ?>
 
 		<div class="homepage-slides">
-			<?php 
-			while( $breaking_query->have_posts() ) : $breaking_query->the_post(); 
+			<?php
+			while( $breaking_query->have_posts() ) : $breaking_query->the_post();
 
-				if ( has_post_thumbnail() ) {   
+				if ( has_post_thumbnail() ) {
 					$image_url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'furniture-large' );
 					$image = esc_url($image_url[0]);
 					?>
@@ -50,7 +50,7 @@ if( $query != 'custom' ):
 		</div>
 	<?php endif; ?>
 
-<?php else: 
+<?php else:
 	if( !empty($breaking_custom) ){
 		echo wp_specialchars_decode($breaking_custom);
 	}

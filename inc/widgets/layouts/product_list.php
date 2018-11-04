@@ -3,8 +3,8 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 ?>
-<?php 
-if ( $posts->have_posts() ): ?>
+<?php
+if ( $posts->have_posts() && $posts->found_posts >=2): ?>
 			<?php
 			$idObj = get_category_by_slug( $instance['magazil_category'] );
 			?>
