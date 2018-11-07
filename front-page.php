@@ -38,7 +38,11 @@
       <?php
         $testi_hdr = get_theme_mod('magazil_testimonial_text');
         if( !empty($testi_hdr) ){
-          echo wp_specialchars_decode($testi_hdr);
+          if ( function_exists( 'pll_e' ) ) :
+            pll_e(wp_specialchars_decode($testi_hdr));
+          else:
+            echo wp_specialchars_decode($testi_hdr);
+          endif;
         }
         ?>
     </div>

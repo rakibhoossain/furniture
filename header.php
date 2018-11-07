@@ -33,14 +33,18 @@
 						<?php 
 						$magazil_header_text = get_theme_mod( 'magazil_header_text' );
 						if($magazil_header_text):?>
-							<?php echo wp_specialchars_decode($magazil_header_text); ?>
+							<?php if ( function_exists( 'pll_e' ) ) : ?>
+								<?php pll_e(wp_specialchars_decode($magazil_header_text)); ?>
+							<?php else: ?>
+								<?php echo wp_specialchars_decode($magazil_header_text); ?>
+							<?php endif; ?>
 						<?php endif; ?>
 						</div>
 	                </div>
 	                <div class="col-md-6 text-right fruniture-lng-area">
 						<?php if ( function_exists( 'pll_the_languages' ) ) : ?>
 	                    <ul class="list-lng">
-	                    	<?php pll_the_languages(array( 'show_flags' => 1,'show_names' => 0 ));?></ul>
+	                    	<?php pll_the_languages(array( 'show_flags' => 1 ));?></ul>
 						<?php endif; ?>
 	                </div>
 	            </div>

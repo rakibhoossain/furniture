@@ -282,3 +282,8 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+if (function_exists('pll_register_string')) {
+    pll_register_string('Testimonial title', get_theme_mod('magazil_testimonial_text'), 'furniture',true);
+    pll_register_string('Header top area text', get_theme_mod('magazil_header_text'), 'furniture',true);
+}
