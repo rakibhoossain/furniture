@@ -1,11 +1,9 @@
-#, fuzzy
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: furniture\n"
-"POT-Creation-Date: 2018-11-09 15:00+0600\n"
-"PO-Revision-Date: 2018-11-09 15:00+0600\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2018-11-09 15:03+0600\n"
+"PO-Revision-Date: 2018-11-09 15:37+0600\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,508 +16,518 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: bn_BD\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: 404.php:18
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "ওহ! পৃষ্ঠাটি পাওয়া যায় নাই।"
 
 #: 404.php:22
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
+"মনে হচ্ছে এই অবস্থানে কিছুই পাওয়া যায়নি। হয়তো নীচের লিঙ্কে একটি চেষ্টা করুন বা "
+"একটি অনুসন্ধান?"
 
 #: 404.php:35
 msgid "Most Used Categories"
-msgstr ""
+msgstr "সর্বাধিক ব্যবহৃত বিভাগ"
 
 #. translators: %1$s: smiley
 #: 404.php:52
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
+msgstr "মাসিক নথিপত্রতে দেখার চেষ্টা কর। %1$s"
 
 #: comments.php:46
 msgid "Comments are closed."
-msgstr ""
+msgstr "মন্তব্য বন্ধ।"
 
 #: comments.php:67
 msgid "Submit"
-msgstr ""
+msgstr "জমা দিন"
 
 #: footer.php:49
 #, php-format
 msgid "&copy; %1$s %2$s. All right reserved. | Developed by  %3$s"
-msgstr ""
+msgstr "&copy; %1$s %2$s। সমস্ত অধিকার সংরক্ষিত | নির্মাণে %3$s"
 
 #: functions.php:47
 msgid "Primary"
-msgstr ""
+msgstr "প্রাথমিক"
 
 #: functions.php:48
 msgid "Social Links Menu"
-msgstr ""
+msgstr "সামাজিক লিংক মেনু"
 
 #: functions.php:119
 msgid "Front page area"
-msgstr ""
+msgstr "ফ্রন্টপেজ এলাকা"
 
 #: functions.php:121
 msgid "Add widgets to front page."
-msgstr ""
+msgstr "সামনের পাতায় উইজেট যোগ করুন।"
 
 #: functions.php:128
 msgid "Slider Right Area"
-msgstr ""
+msgstr "স্লাইডার ডান এলাকা"
 
 #: functions.php:130
 msgid "Add widgets to slider right area."
-msgstr ""
+msgstr "স্লাইডার ডান এলাকায় উইজেট যোগ করুন।"
 
 #: functions.php:139
 msgid "Sidebar"
-msgstr ""
+msgstr "সাইডবার"
 
 #: functions.php:141
 msgid "Add widgets here."
-msgstr ""
+msgstr "এখানে উইজেট যোগ করুন।"
 
 #: functions.php:148
 msgid "Product sidebar"
-msgstr ""
+msgstr "প্রোডাক্ট সাইডবার"
 
 #: functions.php:150
 msgid "Add widgets to product sidebar."
-msgstr ""
+msgstr "প্রোডাক্ট সাইডবারে উইজেট যোগ করুন।"
 
 #: functions.php:160
 msgid "Footer sidebar-1"
-msgstr ""
+msgstr "ফুটার সাইডবার -১"
 
 #: functions.php:162 functions.php:171
 msgid "Add widget to footer-2"
-msgstr ""
+msgstr "ফুটার সাইডবার -২ এ উইজেট যোগ করুন।"
 
 #: functions.php:169
 msgid "Footer sidebar-2"
-msgstr ""
+msgstr "ফুটার সাইডবার -২"
 
 #: functions.php:178
 msgid "Footer sidebar-3"
-msgstr ""
+msgstr "ফুটার সাইডবার -৩"
 
 #: functions.php:180
 msgid "Add widget to footer-3"
-msgstr ""
+msgstr "ফুটার সাইডবার -৩ এ উইজেট যোগ করুন।"
 
 #: functions.php:187
 msgid "Footer sidebar-4"
-msgstr ""
+msgstr "ফুটার সাইডবার -৪"
 
 #: functions.php:189
 msgid "Add widget to footer-4"
-msgstr ""
+msgstr "ফুটার সাইডবার -৪ এ উইজেট যোগ করুন।"
 
 #: functions.php:196
 msgid "Footer sidebar-5"
-msgstr ""
+msgstr "ফুটার সাইডবার -৫"
 
 #: functions.php:198
 msgid "Add widget to footer 5"
-msgstr ""
+msgstr "ফুটার সাইডবার -৫ এ উইজেট যোগ করুন।"
 
 #: header.php:25
 msgid "Skip to content"
-msgstr ""
+msgstr "এড়িয়ে যাও কন্টেন্ট"
 
 #: header.php:97
 msgid "Primary Menu"
-msgstr ""
+msgstr "প্রধান নেভিগেশন"
 
 #: inc/breadcrumbs.php:244
 msgid "Browse:"
-msgstr ""
+msgstr "ব্রাউজ করুন:"
 
 #: inc/breadcrumbs.php:245
 msgctxt "breadcrumbs aria label"
 msgid "Breadcrumbs"
-msgstr ""
+msgstr "ব্রেডক্রাম্ব"
 
 #: inc/breadcrumbs.php:246
 msgid "Home"
-msgstr ""
+msgstr "বাড়ি"
 
 #: inc/breadcrumbs.php:247
 msgid "404 Not Found"
-msgstr ""
+msgstr "৪০৪ পাওয়া যায়নি"
 
 #: inc/breadcrumbs.php:248
 msgid "Archives"
-msgstr ""
+msgstr "নথিপত্র"
 
 #: inc/breadcrumbs.php:250
 #, php-format
 msgid "Search results for &#8220;%s&#8221;"
-msgstr ""
+msgstr "অনুসন্ধান ফলাফল &#8220;%s&#8221;"
 
 #: inc/breadcrumbs.php:252
 #, php-format
 msgid "Page %s"
-msgstr ""
+msgstr "পৃষ্ঠা %s"
 
 #: inc/breadcrumbs.php:254
 #, php-format
 msgid "Minute %s"
-msgstr ""
+msgstr "মিনিট %s"
 
 #: inc/breadcrumbs.php:256
 #, php-format
 msgid "Week %s"
-msgstr ""
+msgstr "সপ্তাহ %s"
 
 #: inc/breadcrumbs.php:708
 msgctxt "minute and hour archives time format"
 msgid "g:i a"
-msgstr ""
+msgstr "g:i a"
 
 #: inc/breadcrumbs.php:725
 msgctxt "minute archives time format"
 msgid "i"
-msgstr ""
+msgstr "i "
 
 #: inc/breadcrumbs.php:742
 msgctxt "hour archives time format"
 msgid "g a"
-msgstr ""
+msgstr "g a"
 
 #: inc/breadcrumbs.php:758 inc/breadcrumbs.php:787 inc/breadcrumbs.php:814
 #: inc/breadcrumbs.php:841 inc/breadcrumbs.php:1182
 msgctxt "yearly archives date format"
 msgid "Y"
-msgstr ""
+msgstr "Y"
 
 #: inc/breadcrumbs.php:759 inc/breadcrumbs.php:815 inc/breadcrumbs.php:1186
 msgctxt "monthly archives date format"
 msgid "F"
-msgstr ""
+msgstr "F"
 
 #: inc/breadcrumbs.php:760 inc/breadcrumbs.php:1190
 msgctxt "daily archives date format"
 msgid "j"
-msgstr ""
+msgstr "j"
 
 #: inc/breadcrumbs.php:788
 msgctxt "weekly archives date format"
 msgid "W"
-msgstr ""
+msgstr "W"
 
 #: inc/class-eshop-related-posts.php:111
 msgid "Related posts"
-msgstr ""
+msgstr "সম্পর্কিত পোস্ট"
 
 #: inc/class-eshop-related-product.php:112
 msgid "Related product"
-msgstr ""
+msgstr "সম্পর্কিত প্রোডাক্ট"
 
 #: inc/customizer.php:65
 msgid "Theme Settings"
-msgstr ""
+msgstr "থিম সেটিং"
 
 #: inc/customizer.php:66
 msgid "Magazil Theme settings"
-msgstr ""
+msgstr "Magazil থিম সেটিং"
 
 #: inc/customizer.php:73
 msgid "Header settings"
-msgstr ""
+msgstr "শিরোলেখ সেটিংস"
 
 #: inc/customizer.php:87 inc/customizer.php:215
 msgid "Custom text"
-msgstr ""
+msgstr "কাস্টম পাঠ "
 
 #: inc/customizer.php:88
 msgid "Custom text to display at header top area."
-msgstr ""
+msgstr "কাস্টম টেক্সট শিরোনাম টপ এলাকায় প্রদর্শন করতে।"
 
 #: inc/customizer.php:100
 msgid "Slider settings"
-msgstr ""
+msgstr "স্লাইডার সেটিংস"
 
 #: inc/customizer.php:164
 msgid "Slider type"
-msgstr ""
+msgstr "স্লাইডার ধরন"
 
 #: inc/customizer.php:165
 msgid "Select what type of post you want to use"
-msgstr ""
+msgstr "আপনি কোন পোস্টটি ব্যবহার করতে চান তা নির্বাচন করুন"
 
 #: inc/customizer.php:176
 msgid "Slider pages"
-msgstr ""
+msgstr "স্লাইডার পৃষ্ঠাসমূহ"
 
 #: inc/customizer.php:188
 msgid "Select product"
-msgstr ""
+msgstr "পণ্য নির্বাচন করুন"
 
 #: inc/customizer.php:200
 msgid "Slider category"
-msgstr ""
+msgstr "স্লাইডার বিভাগ"
 
 #: inc/customizer.php:216
 msgid ""
 "Custom text to display as slider. Must use list element to display properly."
 msgstr ""
+"কাস্টম টেক্সট স্লাইডার হিসাবে প্রদর্শন করতে। সঠিকভাবে প্রদর্শন করতে তালিকা উপাদান "
+"ব্যবহার করা আবশ্যক।"
 
 #: inc/customizer.php:228
 msgid "Slider limit:"
-msgstr ""
+msgstr "স্লাইডার পোস্ট সীমা:"
 
 #: inc/customizer.php:229
 msgid "How much post do you want to show."
-msgstr ""
+msgstr "কত পোস্ট আপনি প্রদর্শন করতে চান।"
 
 #: inc/customizer.php:246
 msgid "Testimonial settings"
-msgstr ""
+msgstr "প্রশংসাপত্র সেটিংস"
 
 #: inc/customizer.php:260
 msgid "Header title content"
-msgstr ""
+msgstr "শিরোনাম কন্টেন্ট"
 
 #: inc/template-functions.php:86
 msgid "No Comments"
-msgstr ""
+msgstr "মন্তব্য বন্ধ।"
 
 #: inc/template-functions.php:88
 msgid " Comments"
-msgstr ""
+msgstr "মন্তব্য"
 
 #: inc/template-functions.php:90
 msgid "1 Comment"
-msgstr ""
+msgstr "একটি মন্তব্য"
 
 #: inc/template-functions.php:94
 msgid "Comments are off for this post."
-msgstr ""
+msgstr "মন্তব্য বন্ধ।"
 
 #: inc/template-functions.php:131 inc/template-functions.php:133
 #, php-format
 msgid "%1$s"
-msgstr ""
+msgstr "%1$s"
 
 #: inc/template-functions.php:135
 msgid "(Edit)"
-msgstr ""
+msgstr "(সম্পাদনা করুন)"
 
 #: inc/template-functions.php:140
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "তোমার মতামত বিবেচনাধীন।"
 
 #: inc/template-functions.php:147
 #, php-format
 msgid "%s"
-msgstr ""
+msgstr "%s"
 
 #: inc/template-functions.php:194
 msgid "Posts"
-msgstr ""
+msgstr "পোস্ট"
 
 #: inc/template-functions.php:195
 msgid "Pages"
-msgstr ""
+msgstr "পৃষ্ঠাসমূহ"
 
 #: inc/template-functions.php:196
 msgid "Product"
-msgstr ""
+msgstr "পণ্য"
 
 #: inc/template-functions.php:197
 msgid "Categories"
-msgstr ""
+msgstr "ধরন"
 
 #: inc/template-functions.php:198
 msgid "Custom"
-msgstr ""
+msgstr "কাষ্টম"
 
 #: inc/template-functions.php:346
 msgid "Share on Facebook"
-msgstr ""
+msgstr "ফেসবুকে শেয়ার করো"
 
 #: inc/template-functions.php:351
 msgid "Share on Twitter"
-msgstr ""
+msgstr "টুইটারে শেয়ার করো"
 
 #: inc/template-functions.php:356
 msgid "Share on VK"
-msgstr ""
+msgstr "ভিকে শেয়ার করো"
 
 #: inc/template-functions.php:376
 msgid "Share on Google +1"
-msgstr ""
+msgstr "গুগল প্লাসে শেয়ার করো"
 
 #. translators: %s: post date.
 #: inc/template-tags.php:29
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
-msgstr ""
+msgstr "পোস্ট ডেট %s"
 
 #. translators: %s: post author.
 #: inc/template-tags.php:45
 #, php-format
 msgctxt "post author"
 msgid "by %s"
-msgstr ""
+msgstr "করেছেন %s"
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:62
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #. translators: 1: list of categories.
 #: inc/template-tags.php:65
 #, php-format
 msgid "Posted in %1$s"
-msgstr ""
+msgstr "পোস্ট %1$s"
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:69
+#, fuzzy
 msgctxt "list item separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #. translators: 1: list of tags.
 #: inc/template-tags.php:72
 #, php-format
 msgid "Tagged %1$s"
-msgstr ""
+msgstr "ট্যাগ %1$s"
 
 #. translators: %s: post title
 #: inc/template-tags.php:82
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr ""
+msgstr "মন্তব্য করুন <span class=\"screen-reader-text\">%s</span>"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: inc/template-tags.php:99 template-parts/content-page.php:37
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr ""
+msgstr "সম্পাদন করা <span class=\"screen-reader-text\">%s</span>"
 
 #: inc/widgets/class-widget-magazil-posts-list-horizontal.php:13
 msgid "Magazil - Horizontal Posts List"
-msgstr ""
+msgstr "Magazil - অনুভূমিক পোস্ট তালিকা"
 
 #: inc/widgets/class-widget-magazil-posts-list-horizontal.php:15
 msgid "Front page horizontal post layout"
-msgstr ""
+msgstr "সামনে পৃষ্ঠা অনুভূমিক পোস্ট বিন্যাস"
 
 #: inc/widgets/class-widget-magazil-posts-list-horizontal.php:29
 #: inc/widgets/class-widget-magazil-posts-list-horizontal.php:135
 msgid "Recent posts"
-msgstr ""
+msgstr "সাম্প্রতিক পোস্ট"
 
 #: inc/widgets/class-widget-magazil-posts-list-horizontal.php:40
 #: inc/widgets/class-widget-magazil-product-category.php:32
 msgid "Title"
-msgstr ""
+msgstr "শিরনাম"
 
 #: inc/widgets/class-widget-magazil-posts-list-horizontal.php:47
 msgid "Category"
-msgstr ""
+msgstr "বিভাগ"
 
 #: inc/widgets/class-widget-magazil-posts-list-horizontal.php:52
 msgid "&ndash; Select a category &ndash;"
-msgstr ""
+msgstr "&ndash; একটি বিভাগ নির্বাচন করুন &ndash;"
 
 #: inc/widgets/class-widget-magazil-posts-list-horizontal.php:67
 msgid "Order"
-msgstr ""
+msgstr "ক্রম"
 
 #: inc/widgets/class-widget-magazil-posts-list-horizontal.php:70
 msgid "Descending"
-msgstr ""
+msgstr "নিম্নক্রম"
 
 #: inc/widgets/class-widget-magazil-posts-list-horizontal.php:71
 msgid "Ascending"
-msgstr ""
+msgstr "ঊর্ধ্বগামী"
 
 #: inc/widgets/class-widget-magazil-posts-list-horizontal.php:72
 msgid "Random"
-msgstr ""
+msgstr "এলোমেলো"
 
 #: inc/widgets/class-widget-magazil-posts-list-horizontal.php:77
 #: inc/widgets/class-widget-magazil-product-category.php:40
 msgid "Posts to Show"
-msgstr ""
+msgstr "শো পোস্ট"
 
 #: inc/widgets/class-widget-magazil-posts-list-horizontal.php:152
 #: inc/widgets/class-widget-magazil-product-category.php:86
 msgid "Please configure your widget"
-msgstr ""
+msgstr "আপনার উইজেটটি কনফিগার করুন"
 
 #: inc/widgets/class-widget-magazil-product-category.php:12
 msgid "Magazil: Product category"
-msgstr ""
+msgstr "পণ্য বিভাগ"
 
 #: inc/widgets/class-widget-magazil-product-category.php:13
 msgid "Sidebar area product category."
-msgstr ""
+msgstr "সাইডবার এলাকা পণ্য বিভাগ"
 
 #: inc/widgets/class-widget-magazil-product-category.php:26
 msgid "Procuct category"
-msgstr ""
+msgstr "পণ্য বিভাগ"
 
 #: inc/widgets/class-widget-magazil-product-category.php:66
 msgid "Product category"
-msgstr ""
+msgstr "পণ্য বিভাগ"
 
 #: inc/widgets/layouts/product_category.php:26
 msgid "View"
-msgstr ""
+msgstr "দৃশ্য"
 
 #. translators: %s: search query.
 #: search.php:22
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "অনুসন্ধান ফলাফল: %s"
 
 #: searchform.php:9
 msgctxt "placeholder"
 msgid "Search &hellip;"
-msgstr ""
+msgstr "অনুসন্ধান &hellip;"
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
-msgstr ""
+msgstr "কিছুই পাওয়া যায়নি"
 
 #. translators: 1: link to WP admin new post page.
 #: template-parts/content-none.php:24
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
+msgstr "আপনার প্রথম পোস্ট প্রকাশ করতে প্রস্তুত? <a href=\"%1$s\">এখানে শুরু করুন</a>।"
 
 #: template-parts/content-none.php:37
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"দুঃখিত, কিন্তু কিছুই আপনার অনুসন্ধান শর্ত মেলেনি। কিছু ভিন্ন কীওয়ার্ড দিয়ে আবার চেষ্টা "
+"করুন।"
 
 #: template-parts/content-none.php:44
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
+"মনে হচ্ছে আমরা যা খুঁজছি তা খুঁজে পাচ্ছি না। সম্ভবত অনুসন্ধান সাহায্য করতে পারেন।"
 
 #: template-parts/content-page.php:24 template-parts/content.php:26
 msgid "Pages:"
-msgstr ""
+msgstr "পৃষ্ঠাসমূহ:"
 
 #: template-parts/content-product.php:19
 msgid "Details"
-msgstr ""
+msgstr "বিস্তারিত"
 
 #: template-parts/content-single.php:25
 #, php-format
@@ -527,27 +535,29 @@ msgid ""
 "<li><time datetime=\"%1$s\">%1$s</time></li><li>%2$s</li><li>Comments: %3$s</"
 "li>"
 msgstr ""
+"<li><time datetime=\"%1$s\">%1$s</time></li><li>%2$s</li><li>মন্তব্যসমূহ: %3$s</"
+"li>"
 
 #: template-parts/content.php:22
 msgid "Read more"
-msgstr ""
+msgstr "আরো পড়েন"
 
 #. Theme Name of the plugin/theme
 msgid "furniture"
-msgstr ""
+msgstr "আসবাবপত্র"
 
 #. Theme URI of the plugin/theme
 msgid "http://rakib.ooo/"
-msgstr ""
+msgstr "http://rakib.ooo/"
 
 #. Description of the plugin/theme
 msgid "Full responsive furniter shop theme."
-msgstr ""
+msgstr "সম্পূর্ণ প্রতিক্রিয়াশীল আসবাবপত্র দোকান থিম।"
 
 #. Author of the plugin/theme
 msgid "Rakib Hossain"
-msgstr ""
+msgstr "রকিব হোসেন"
 
 #. Author URI of the plugin/theme
 msgid "http://facebook.com/prof.rakib"
-msgstr ""
+msgstr "http://facebook.com/prof.rakib"
